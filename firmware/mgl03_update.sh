@@ -13,7 +13,7 @@ trap clean_exit EXIT SIGINT SIGTERM SIGHUP
 
 echo "* Getting firmware list"
 
-FW_URI_LIST=$(curl -s -k -o- "https://api.github.com/repos/serrj-sv/lumi.gateway.mgl03/git/trees/main?recursive=1" | grep custom | grep mod | grep zip | sort | cut -f4 -d'"')
+FW_URI_LIST=$(curl -s -k -o- "https://api.github.com/repos/zvldz/mgl03_fw/git/trees/main?recursive=1" | grep custom | grep mod | grep zip | sort | cut -f4 -d'"')
 
 if [ -z "$FW_URI_LIST" ]; then
     echo "! Cannot detect uri for firmware"
