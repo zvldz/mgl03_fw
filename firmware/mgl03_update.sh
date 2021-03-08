@@ -42,7 +42,7 @@ done
 
 FW_URI=$(echo $FW_URI_LIST | cut -d' ' -f$CHOICE)
 
-FW_URL="https://raw.githubusercontent.com/serrj-sv/lumi.gateway.mgl03/main/${FW_URI}"
+FW_URL="https://raw.githubusercontent.com/zvldz/mgl03_fw/main/${FW_URI}"
 
 CONTENT_LENGTH=$(curl -s -I -L -k $FW_URL | grep Content-Length | cut -f2 -d' ' | tr -d "\n\r")
 
