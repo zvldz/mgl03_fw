@@ -15,9 +15,9 @@
   * added greeting info (fw version, ip, mac, token and etc)
   * added '/data/bin' in $PATH and '/data/lib' in $LD_LIBRARY_PATH
   * created symlink '/.profile' to '/data/.profile (useful for alias and etc)
-  20210127
+* 20210127
   * homekitserver patched to downgrade firmware
-  20210305
+* 20210305
   * added 'nano', 'minicom', 'sx', 'sz', 'rx', 'rz'
-  20210309
+* 20210309
   * added 'file'
