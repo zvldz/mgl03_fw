@@ -13,4 +13,4 @@ Xiaomi Gateway v3 firmwares and update manuals
 * [Collection of documents, tools, scripts, sources, firmwares and recoveries](https://github.com/serrj-sv/lumi.gateway.mgl03)
 * [Xiaomi Gateway 3 integration for Home Assistant](https://github.com/AlexxIT/XiaomiGateway3)
 * [Another XGW3 project](https://github.com/niceboygithub/XiaomiGateway3fw)
-* [Article about gateway flashing(russian language)](https://simple-ha.ru/posts/261)
+* [Article about gateway flashing(russian)](https://simple-ha.ru/posts/261)
