@@ -61,7 +61,9 @@ Download modified firmware from [firmware folder](https://github.com/serrj-sv/lu
 If you are using the [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) component.
 For recommended firmware, see [https://github.com/AlexxIT/XiaomiGateway3/wiki](https://github.com/AlexxIT/XiaomiGateway3/wiki).
 
-For example [mgl03_1.4.6_0012_mod20210308.zip](https://github.com/zvldz/mgl03_fw/raw/main/firmware/custom/mgl03_1.4.6_0012_mod20210308/mgl03_1.4.6_0012_mod20210308.zip).
+You can get firmware [here](https://github.com/zvldz/mgl03_fw/raw/main/firmware/custom/).
+
+For example mgl03_1.4.6_0012_mod20210308.zip.
 
 Unzip archive mgl03_1.4.6_0012_mod20210308.zip.
 
