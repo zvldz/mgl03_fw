@@ -84,5 +84,5 @@ reboot
 
 All copied files will be deleted automatically.
 
-In case of major changes between versions of updated firmware, you will most likely need to reset gateway.
+In case of major changes between versions of updated firmware, you will most likely need to reset gateway (click on it's button 10 times repeatedly).
 
