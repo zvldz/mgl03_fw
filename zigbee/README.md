@@ -28,8 +28,8 @@ If you see something like in screenshot, all is ok - you have updated zigbee fir
 Example of part of the config for Zigbee2MQTT:
 ```yaml
 serial:
-	adapter: ezsp
-	port: 'tcp://192.168.1.177:8888'
+    adapter: ezsp
+    port: 'tcp://192.168.1.177:8888'
 ```
 At this time, you need dev version of Zigbee2MQTT or Edge version of Home Assistant addon.
 For addon, you need to configure adapter via UI.
