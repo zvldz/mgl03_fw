@@ -8,7 +8,7 @@ Login - "admin", no password.
 
 <img src="../media/screenshot_telnet2.png" width="400">
 
-# The easy way
+## The easy way
 If you are using [Home Assistant](https://www.home-assistant.io/). You need to enable ZHA mode in the [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) component.
 
 <img src="../media/screenshot_zigbee_z2m.png" width="400">
@@ -28,6 +28,6 @@ You will need to select firmware version:
 If you see something like in screenshot, all is ok - you have updated zigbee firmware and you can configure Zigbee2MQTT.
 
 
-Script author @CODeRUS
+Script author [@CODeRUS](https://github.com/CODeRUS)
 
-Made firmware for Zigbee2MQTT by Alexander Faronov
+Made firmware for Zigbee2MQTT by **Alexander Faronov**
