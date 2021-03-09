@@ -1,6 +1,6 @@
 # Updating mgl03 gateway firmware via telnet
 Telnet must be opened on the gateway (via custom component from [@AlexxIT](https://github.com/AlexxIT/XiaomiGateway3/) or php-miio/python-miio).
-You need telnet client like putty or other.
+You will need telnet client like putty or other.
 You can find out IP of the gateway in MiHome or on your router.
 Login - "admin", no password.
 
@@ -9,7 +9,7 @@ Login - "admin", no password.
 <img src="../media/screenshot_telnet2.png" width="400">
 
 # The easy way
-Go to telnet session on gateway and run commands:
+Open telnet session, connect to gateway and run commands:
 ```sh
 wget -O /tmp/curl "http://master.dl.sourceforge.net/project/mgl03/bin/curl?viasf=1" && chmod +x /tmp/curl
 export PATH="$PATH:/tmp"
@@ -22,7 +22,7 @@ For recommended firmware, see [https://github.com/AlexxIT/XiaomiGateway3/wiki](h
 
 <img src="../media/screenshot_telnet_script.png" width="768">
 
-If you see something like in screenshot, all is ok - you have updated gateway.
+If you see something like in screenshot, everything is ok - you have updated gateway.
 If you used putty, window will close after rebooting gateway. Make sure there are no errors.
 
 In case of major changes between versions of updated firmware, you will most likely need to reset gateway.
@@ -47,7 +47,7 @@ command: ftp
 <img src="../media/screenshot_ha.png" width="400">
 
 ### Manual mode
-To start the ftp-server you need to log into gateway via telnet and execute the commands:
+To start the ftp-server you will need to login to gateway via telnet and execute commands:
 ```sh
 wget -O /data/busybox "http://master.dl.sourceforge.net/project/mgl03/bin/busybox?viasf=1" && chmod +x /data/busybox
 /data/busybox tcpsvd -vE 0.0.0.0 21 /data/busybox ftpd -w &
@@ -58,8 +58,7 @@ wget -O /data/busybox "http://master.dl.sourceforge.net/project/mgl03/bin/busybo
 ## Copying files via ftp to gateway
 Download modified firmware from [firmware folder](https://github.com/serrj-sv/lumi.gateway.mgl03/tree/main/firmware/custom).
 
-If you are using the [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) component.
-For recommended firmware, see [https://github.com/AlexxIT/XiaomiGateway3/wiki](https://github.com/AlexxIT/XiaomiGateway3/wiki).
+If you are using the [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) component, for recommended firmware, see [https://github.com/AlexxIT/XiaomiGateway3/wiki](https://github.com/AlexxIT/XiaomiGateway3/wiki).
 
 You can get firmware [here](https://github.com/zvldz/mgl03_fw/raw/main/firmware/custom/).
 
@@ -84,5 +83,5 @@ reboot
 
 All copied files will be deleted automatically.
 
-In case of major changes between versions of updated firmware, you will most likely need to reset gateway (click on it's button 10 times repeatedly).
+In case of major changes between versions of updated firmware, most likely you will need to reset gateway (click on it's button 10 times repeatedly).
 
