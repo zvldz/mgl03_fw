@@ -25,6 +25,15 @@ You will need to select firmware version:
 
 If you see something like in screenshot, all is ok - you have updated zigbee firmware and you can configure Zigbee2MQTT.
 
+Example of part of the config for Zigbee2MQTT:
+```yaml
+serial:
+	adapter: ezsp
+	port: 'tcp://192.168.1.177:8888'
+```
+At this time, you need dev version of Zigbee2MQTT or Edge version of Home Assistant addon.
+For addon, you need to configure adapter via UI.
+
 
 Script author [@CODeRUS](https://github.com/CODeRUS)
 
