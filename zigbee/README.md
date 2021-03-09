@@ -35,6 +35,9 @@ This time, you need dev version of Zigbee2MQTT or Edge version of Home Assistant
 For addon, you need to configure adapter via UI.
 
 
+Attention! Remember, once you've installed custom zigbee firmware, you will not be able to upgrade gateway via MiHome app. Only custom firmware upgrades are available in this case.
+
+
 Script author [@CODeRUS](https://github.com/CODeRUS)
 
 Firmware for Zigbee2MQTT complied by **Alexander Faronov**
