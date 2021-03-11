@@ -38,6 +38,9 @@ For addon, you need to configure adapter via UI.
 Attention! Remember, once you've installed custom zigbee firmware, you will not be able to upgrade gateway via MiHome app. Only custom firmware upgrades are available in this case.
 
 
-Script author [@CODeRUS](https://github.com/CODeRUS)
+If you want to return to MiHome with gateway, you need to flash stock firmware (ncp-uart-sw_mgl03_6_6_2_stock.gbl) and turn off ZHA mode.
+
+
+Script author **[@CODeRUS](https://github.com/CODeRUS)**
 
 Firmware for Zigbee2MQTT complied by **Alexander Faronov**
