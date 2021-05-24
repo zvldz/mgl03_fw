@@ -63,6 +63,7 @@ echo "* Firmware size: $FW_SIZE"
 
 if [ "$CONTENT_LENGTH" != "$FW_SIZE" ]; then
     echo "! Incorrect firmware size"
+    echo "! Check free space in /data"
     exit 4
 fi
 
