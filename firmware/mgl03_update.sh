@@ -14,6 +14,8 @@ trap clean_exit EXIT SIGINT SIGTERM SIGHUP
 echo "* Getting firmware list"
 
 FW_URI_LIST=$(curl -s -k -o- "https://api.github.com/repos/zvldz/mgl03_fw/git/trees/main?recursive=1" | grep custom | grep mod | grep zip | sort | cut -f4 -d'"')
+FW_URI_LIST_STOCK=$(curl -s -k -o- "https://api.github.com/repos/zvldz/mgl03_fw/git/trees/main?recursive=1" | grep stock | grep zip | sort | cut -f4 -d'"')
+FW_URI_LIST="$FW_URI_LIST $FW_URI_LIST_STOCK"
 
 if [ -z "$FW_URI_LIST" ]; then
     echo "! Cannot detect uri for firmware"
@@ -23,7 +25,7 @@ fi
 while : ; do
     COUNT=0
     echo
-    echo "For recommended firmware, see https://github.com/AlexxIT/XiaomiGateway3/wiki"
+    echo "For recommended firmware, see https://github.com/AlexxIT/XiaomiGateway3#supported-firmwares"
     echo "Available firmware:"
     for FW_URI in $FW_URI_LIST; do
         COUNT=$(expr $COUNT + 1)
@@ -84,6 +86,7 @@ if [ -z $BLE_VER ]; then
     echo "! BLE firmware version is not detected. Use 125."
     BLE_VER=123
 fi
+killall -q -9 gw3
 run_ble_dfu.sh /dev/ttyS1 /tmp/full*gbl $BLE_VER 1
 
 echo
