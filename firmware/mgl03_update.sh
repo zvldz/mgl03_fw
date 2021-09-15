@@ -9,7 +9,7 @@ clean_exit () {
     fi
 }
 
-trap clean_exit EXIT SIGINT SIGTERM SIGHUP
+trap clean_exit EXIT SIGINT SIGTERM SIGHUP SIGQUIT SIGILL SIGTRAP
 
 echo "* Getting firmware list"
 
@@ -22,25 +22,49 @@ if [ -z "$FW_URI_LIST" ]; then
     exit 2
 fi
 
+echo
+echo "For recommended firmware, see https://github.com/AlexxIT/XiaomiGateway3#supported-firmwares"
+
 while : ; do
     COUNT=0
     echo
-    echo "For recommended firmware, see https://github.com/AlexxIT/XiaomiGateway3#supported-firmwares"
     echo "Available firmware:"
+    echo "[0] Exit"
+
     for FW_URI in $FW_URI_LIST; do
         COUNT=$(expr $COUNT + 1)
         echo -n "[${COUNT}] "
         echo $FW_URI | cut -d'/' -f4
     done
+
     echo -n "Please choose firmware: "
     read CHOICE
+
+    expr 0 + $CHOICE > /dev/null 2>&1
+
+    if [ $? -gt 1 ]; then
+        echo "! Wrong choice"
+        continue
+    fi
+
+    if [ $CHOICE -eq 0 ]; then
+        echo "Exit !!!"
+        exit 1
+    fi
+
     for NUM in $(seq 1 $COUNT); do
         if [ $CHOICE -eq $NUM ]; then
             break 2
         fi
     done
+
     echo "! Wrong choice"
 done
+
+echo "* Trying to free up space in /data"
+cat /dev/null > /data/firmware.bin > /dev/null 2>&1
+cat /dev/null > /data/firmware/firmware_ota.bin > /dev/null 2>&1
+rm -f /data/root.bin /data/linux.bin /data/firmware/root.bin /data/firmware/linux.bin
 
 FW_URI=$(echo $FW_URI_LIST | cut -d' ' -f$CHOICE)
 
