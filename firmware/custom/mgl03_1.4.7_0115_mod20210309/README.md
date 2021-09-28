@@ -3,7 +3,7 @@
   * enabled 'telnetd'
   * disabled gen password
   * removes password if exists
-  * mosquitto listens external interface (port openned)
+  * mosquitto (MQTT broker) listens external interface (port openned)
   * run on startup '/data/run.sh'
   * added 'curl'
   * added 'dropbear' (to start add in '/data/run.sh' line '/bin/dropbear -R -B')
