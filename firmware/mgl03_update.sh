@@ -62,9 +62,31 @@ while : ; do
 done
 
 echo "* Trying to free up space in /data"
-cat /dev/null > /data/firmware.bin > /dev/null 2>&1
-cat /dev/null > /data/firmware/firmware_ota.bin > /dev/null 2>&1
+mkdir -p /data/firmware
+FW_LOCKED=0
+if [ -x /data/busybox ]; then
+    LOCK_FW=$(/data/busybox lsattr /data/firmware.bin 2>/dev/null | grep "\-i-")
+    if [ -n "$LOCK_FW" ]; then
+        FW_LOCKED=1
+    else
+        LOCK_FW=$(/data/busybox lsattr /data/firmware/firmware_ota.bin 2>/dev/null | grep "\-i-")
+        if [ -n "$LOCK_FW" ]; then
+            FW_LOCKED=1
+        fi
+    fi
+
+    if [ $FW_LOCKED -eq 1 ]; then
+        /data/busybox chattr -i /data/firmware.bin /data/firmware/firmware_ota.bin > /dev/null 2>&1
+    fi
+fi
+
+rm -f /data/firmware.bin /data/firmware/firmware_ota.bin > /dev/null 2>&1
+touch /data/firmware.bin /data/firmware/firmware_ota.bin > /dev/null 2>&1
 rm -f /data/root.bin /data/linux.bin /data/firmware/root.bin /data/firmware/linux.bin
+
+if [ $FW_LOCKED -eq 1 ]; then
+    /data/busybox chattr +i /data/firmware.bin /data/firmware/firmware_ota.bin > /dev/null 2>&1
+fi
 
 FW_URI=$(echo $FW_URI_LIST | cut -d' ' -f$CHOICE)
 

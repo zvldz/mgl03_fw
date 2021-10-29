@@ -57,7 +57,7 @@ wget -O /data/busybox "http://master.dl.sourceforge.net/project/mgl03/bin/busybo
 ## Copying files via ftp to gateway
 Download modified firmware from [firmware folder](https://github.com/serrj-sv/lumi.gateway.mgl03/tree/main/firmware/custom).
 
-If you are using the [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) component, for recommended firmware, see [https://github.com/AlexxIT/XiaomiGateway3/wiki](https://github.com/AlexxIT/XiaomiGateway3/wiki).
+If you are using the [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) component, for recommended firmware, see [https://github.com/AlexxIT/XiaomiGateway3/](https://github.com/AlexxIT/XiaomiGateway3/).
 
 You can get firmware [here](https://github.com/zvldz/mgl03_fw/raw/main/firmware/custom/).
 

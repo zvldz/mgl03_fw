@@ -31,7 +31,6 @@ serial:
     adapter: ezsp
     port: 'tcp://192.168.1.177:8888'
 ```
-This time, you need dev version of Zigbee2MQTT or Edge version of Home Assistant addon.
 For addon, you need to configure adapter via UI.
 
 
@@ -43,4 +42,4 @@ If you want to return to MiHome with gateway, you need to flash stock firmware (
 
 Script author **[@CODeRUS](https://github.com/CODeRUS)**
 
-Firmware for Zigbee2MQTT complied by **Alexander Faronov**
+Firmware for Zigbee2MQTT complied by **Alexander Faronov**([@faronov](https://github.com/faronov))
