@@ -61,6 +61,8 @@ while : ; do
     echo "! Wrong choice"
 done
 
+echo
+echo
 echo "* Trying to free up space in /data"
 mkdir -p /data/firmware
 FW_LOCKED=0
@@ -100,6 +102,7 @@ if [ -z "$CONTENT_LENGTH" ] || [ $CONTENT_LENGTH -lt 1024 ]; then
     exit 3
 fi
 
+echo
 echo "* Downloading ..."
 curl -L -k -o /data/update.zip $FW_URL
 
