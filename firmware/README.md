@@ -17,7 +17,7 @@ curl -s -k -L -o /tmp/update.sh https://raw.githubusercontent.com/zvldz/mgl03_fw
 ```
 You will need to select firmware version.
 
-If you are using the [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) component visit [https://github.com/AlexxIT/XiaomiGateway3/wiki](https://github.com/AlexxIT/XiaomiGateway3/wiki) or recommended firmware.
+If you are using the [XiaomiGateway3](https://github.com/AlexxIT/XiaomiGateway3) component visit [https://github.com/AlexxIT/XiaomiGateway3/#supported-firmwares](https://github.com/AlexxIT/XiaomiGateway3/#supported-firmwares) for recommended firmware.
 
 <img src="../media/screenshot_telnet_script.png" width="768">
 
