@@ -1,5 +1,5 @@
 # Updating mgl03 gateway firmware via telnet
-Telnet must be opened on the gateway (via custom component from [@AlexxIT](https://github.com/AlexxIT/XiaomiGateway3/) or php-miio/python-miio).
+Telnet must be opened on the gateway (via custom component from [@AlexxIT](https://github.com/AlexxIT/XiaomiGateway3/) or [php-miio/python-miio](https://gist.github.com/zvldz/1bd6b21539f84339c218f9427e022709#aqara-hub-e1-zhwg16lm-usb-stick)).
 You will need telnet client like putty or other.
 You can find out IP of the gateway in MiHome or on your router.
 Login - "admin", no password.
