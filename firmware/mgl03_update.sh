@@ -9,7 +9,7 @@ clean_exit () {
     fi
 }
 
-trap clean_exit EXIT SIGINT SIGTERM SIGHUP SIGQUIT SIGILL SIGTRAP
+trap clean_exit EXIT SIGTERM SIGHUP SIGQUIT SIGILL SIGTRAP
 
 echo "* Getting firmware list"
 
@@ -27,16 +27,31 @@ echo "For recommended firmware, see https://github.com/AlexxIT/XiaomiGateway3#su
 
 while : ; do
     COUNT=0
+    STOCK=0
+
     echo
     echo "Available firmware:"
     echo "[0] Exit"
 
+    echo "---------------- MOD ----------------"
     for FW_URI in $FW_URI_LIST; do
+        if [ -z "${FW_URI##*stock*}" -a $STOCK -eq 0 ]; then
+            STOCK=1
+            echo "--------------- STOCK ---------------"
+        fi
+
         COUNT=$(expr $COUNT + 1)
-        echo -n "[${COUNT}] "
+
+        if [ $COUNT -lt 10 ]; then
+            echo -n "[${COUNT}]  "
+        else
+            echo -n "[${COUNT}] "
+        fi
+
         echo $FW_URI | cut -d'/' -f4
     done
 
+    echo
     echo -n "Please choose firmware: "
     read CHOICE
 
@@ -66,6 +81,7 @@ echo
 echo "* Trying to free up space in /data"
 mkdir -p /data/firmware
 FW_LOCKED=0
+
 if [ -x /data/busybox ]; then
     LOCK_FW=$(/data/busybox lsattr /data/firmware.bin 2>/dev/null | grep "\-i-")
     if [ -n "$LOCK_FW" ]; then
