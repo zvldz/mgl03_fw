@@ -14,3 +14,4 @@ Xiaomi Gateway v3 firmwares and update manuals
 * [Xiaomi Gateway 3 integration for Home Assistant](https://github.com/AlexxIT/XiaomiGateway3)
 * [Another XGW3 project](https://github.com/niceboygithub/XiaomiGateway3fw)
 * [Article about gateway flashing(russian)](https://simple-ha.ru/posts/261)
+* [Enable telnet on Aqara G3 hub](https://github.com/Wh1terat/aQRootG3)
