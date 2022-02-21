@@ -146,7 +146,7 @@ fi
 
 echo
 echo "* Flashing BLE firmware"
-BLE_VER=$(grep -oe '1\.[23]\..' /tmp/full*gbl | sed 's/\.//g')
+BLE_VER=$(grep -oe '1\.[234]\..' /tmp/full*gbl | sed 's/\.//g')
 if [ -z $BLE_VER ]; then
     echo "! BLE firmware version is not detected. Use 125."
     BLE_VER=123
