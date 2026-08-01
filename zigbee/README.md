@@ -15,9 +15,12 @@ If you are using [Home Assistant](https://www.home-assistant.io/). You need to e
 
 Open telnet session, connect to gateway and run commands:
 ```sh
-wget -O /tmp/zigbee_flash_mgl03.zip "http://master.dl.sourceforge.net/project/mgl03/zigbee/zigbee_flash.zip?viasf=1" && unzip -o /tmp/zigbee_flash_mgl03.zip -d /tmp && cd /tmp && sh /tmp/mgl3_zigbee_flash.sh
+wget -O /tmp/curl "http://master.dl.sourceforge.net/project/mgl03/bin/curl?viasf=1" && chmod +x /tmp/curl
+export PATH="$PATH:/tmp"
+curl -s -k -L -o /tmp/zigbee_flash.zip https://raw.githubusercontent.com/zvldz/mgl03_fw/main/zigbee/zigbee_flash.zip && unzip -o /tmp/zigbee_flash.zip -d /tmp && cd /tmp && sh /tmp/mgl3_zigbee_flash.sh
 ```
 You will need to select firmware version:
+  * ncp-uart-sw_mgl03_6_7_10_z2m.gbl for Zigbee2MQTT (recommended)
   * ncp-uart-sw_mgl03_6_7_8_z2m.gbl for Zigbee2MQTT
   * ncp-uart-sw_mgl03_6_6_2_stock.gbl for return to stock firmware
 
