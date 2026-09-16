@@ -1,5 +1,5 @@
 # mgl03_fw
-Xiaomi Gateway v3 firmwares and update manuals
+Xiaomi Gateway v3 firmware and update manuals
 
 * [Updating mgl03 gateway firmware via telnet](/firmware)
 * [Updating zigbee firmware of mgl03 gateway via telnet for Zigbee2MQTT](/zigbee)
